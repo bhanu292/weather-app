@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weatherly - A professional weather dashboard buit with HTML, CSS and JavaScript.">
+    <title>Weatherly | Weather Dahboardt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <!--Header-->
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">☁️</div>
+            <div>
+            <h1>Weatherly</h1>
+            <p>Clean, fast weather insights</p>
+            </div>
+        </div>
+        <button id="locationBtn" class="location-btn" type="button">📍 Use My Location</button>
+        </header>
+        <!--Search-->
+        <form id="searchForm" class="search-box">
+            <input type="search" id="cityInput" placeholder="Search city..." autocomplete="off" aria-label="Search city">
+            <button tyype="submit">Search</button>
+        </form>
+        <!--Message-->
+        <p id="message" class="message">Search for a city to see the weather.</p>
+        <!--Weather Dashboard-->
+        <section id="dashboard" class="dashboard">
+            <!--Current Weather-->
+            <article class="weather-card current-weather">
+                <div class="location-info">
+                    <div>
+                        <h2 id="cityName">-</h2>
+                        <p id="currentDate">-</p>
+                    </div>
+                    <div id="weatherIcon" class="weather-icon">☀️</div>
+                </div>
+                <div class="temperature-section">
+                    <h3>
+                        <span id="temperature">-</span>°
+                    </h3>
+                    <p id="condition">-</p>
+                </div>
+                <!--Quick Stats-->
+                <div class="quick-stats">
+                    <div class="stat">
+                        <span>Feels Like</span>
+                        <strong id="feelsLike">-</strong>
+                    </div>
+                    <div class="stat">
+                        <span>Humidity</span>
+                        <strong id="humidity">-</strong>
+                    </div>
+                    <div class="stat">
+                        <span>Wind</span>
+                        <strong id="wind">-</strong>
+                    </div>
+                </div>
+            </article>
+            <!--Weather Details-->
+            <article class="weather-card details-card">
+                <h3>Today's Details</h3>
+                <div class="details-list">
+                    <div class="detail">
+                        <span>🌧️ precipitation</span>
+                        <strong id="precipitation">-</strong>
+                    </div>
+                    <div class="detail">
+                        <span>🧭 Wind Direction</span>
+                        <strong id="windDirection">-</strong>
+                    </div>
+                    <div class="detail">
+                        <span>🌡️ Pressure</span>
+                        <strong id="pressure">-</strong>
+                    </div>
+                    <div class="detail">
+                        <span>👁️ Visibility</span>
+                        <strong id="visibility">-</strong>
+                    </div>
+                    <div class="detail">
+                        <span>🌅 Sunrise</span>
+                        <strong id="sunrise">-</strong>
+                    </div>
+                    <div class="detail">
+                        <span>🌇 Sunset</span>
+                        <strong id="sunset">-</strong>
+                    </div>
+                </div>
+            </article>
+            <!--Forecast-->
+            <artice class="weather-card forecast-card">
+                <div class="section-heading">
+                    <h3>5-Day Forecast</h3>
+                </div>
+                <div id="forecast" class="forecast"></div>
+            </artice>
+        </section>
+        <!--Footer-->
+        <footer>
+            <p>Built with HTML, CSS & JavaScript. Weather data by open-Meteo</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
